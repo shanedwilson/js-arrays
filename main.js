@@ -26,3 +26,20 @@ palChecker('mom'); //yes
 palChecker('monkeybutt'); //no
 palChecker('racecar'); //yes
 palChecker('asshole');
+
+let animals = ['snakes', 'rats', 'cats', 'children'];
+
+const lastItem = animals.pop(); //children
+const firstItem = animals.shift();//snakes
+animals.push('bat');
+animals.unshift('baby hippo');
+console.log('animals: ', animals);
+
+// For Loops:
+// 1. What is your starting value? (normally 0)
+// 2. What is your stopping value? (usually .length)
+// 3. How are you incrementing? (usually +1)
+
+for (let i = 0; i < animals.length; i++) {
+    console.log(animals[i]);
+}

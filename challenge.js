@@ -104,7 +104,7 @@ let elizabethSanger = {
     for (let i = 0; i < elizabethSanger.events.length; i++) {
       newString += `<div class="event">`
       newString += `<h3>When: ${elizabethSanger.events[i].date}</h3>`
-      newString += `<h4>Where: ${elizabethSanger.events[i].title}</h4>`
+      newString += `<h4>What: ${elizabethSanger.events[i].title}</h4>`
       newString += `<p>${elizabethSanger.events[i].description}</p>`
       newString += `</div>`;
     }
@@ -161,15 +161,33 @@ const missionStatementStringBuilder = () => {
   imagesStringBuilder();
   missionStatementStringBuilder(); 
 
+  const updateCongressionalDistrict = (newDistrict) => {
+    elizabethSanger.congressionalDistrict = newDistrict;
+    congressionalDistrictStringBuilder();
+  };
+
+  const updateStatements = (newStatement) => {
+    elizabethSanger.statements.push(newStatement);
+    statementsStringBuilder();
+  };
+
   const updateVoterRegistration = (newUrl) => {
     elizabethSanger.voterRegistrationUrl = newUrl;
     voterRegistrationStringBuilder();
   };
 
+  const updateEvents = (newEvent) => {
+    elizabethSanger.events.push(newEvent);
+    eventsStringBuilder();
+  };
+
   const updateDonationForm = (newUrl) => {
     elizabethSanger.donationFormUrl = newUrl;
-    voterRegistrationStringBuilder();
+    donationFormStringBuilder();
   };
 
   updateVoterRegistration('www.shanedwilson.com');
   updateDonationForm('www.avid.com');
+  updateCongressionalDistrict(6);
+  updateStatements({statement: "Pie for some?", category: "Jobs"});
+  updateEvents({date: "8/30/18", title: "Updating Arrays", description: "Shane MIGHT be figuring this shit out"});

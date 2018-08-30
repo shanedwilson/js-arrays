@@ -166,4 +166,10 @@ const missionStatementStringBuilder = () => {
     voterRegistrationStringBuilder();
   };
 
+  const updateDonationForm = (newUrl) => {
+    elizabethSanger.donationFormUrl = newUrl;
+    voterRegistrationStringBuilder();
+  };
+
   updateVoterRegistration('www.shanedwilson.com');
+  updateDonationForm('www.avid.com');

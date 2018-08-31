@@ -181,13 +181,37 @@ const missionStatementStringBuilder = () => {
     eventsStringBuilder();
   };
 
+  const updateVolunteers = (newVolunteer) => {
+    elizabethSanger.volunteers.push(newVolunteer);
+    volunteersStringBuilder();
+  };
+
   const updateDonationForm = (newUrl) => {
     elizabethSanger.donationFormUrl = newUrl;
     donationFormStringBuilder();
   };
+
+  const updateBiography = (newBio) => {
+    elizabethSanger.biography = newBio;
+    biographyStringBuilder();
+  };
+
+  const updateImages = (newImage) => {
+    elizabethSanger.images.push(newImage);
+    imagesStringBuilder();
+  };
+
+  const updateMissionStatement = (newStatement) => {
+    elizabethSanger.missionStatement = newStatement;
+    missionStatementStringBuilder();
+  }
 
   updateVoterRegistration('www.shanedwilson.com');
   updateDonationForm('www.avid.com');
   updateCongressionalDistrict(6);
   updateStatements({statement: "Pie for some?", category: "Jobs"});
   updateEvents({date: "8/30/18", title: "Updating Arrays", description: "Shane MIGHT be figuring this shit out"});
+  updateVolunteers({name: 'Joe Blow', address: 'Your Moms House', email: 'yourmom@comcast.net', phone: '615-you-rmom', availabilty: 'you know it', activities: 'door knocking'});
+  updateBiography('Elizabeth longed for life on two wheels. Riding the open road. For Freedom.');
+  updateImages({imageUrl: 'https://thumbs.dreamstime.com/b/brown-grey-white-wire-haired-terrier-face-black-sitting-down-facing-camera-stripe-down-chest-66247743.jpg', description: 'My true constituents', type: 'constituents'});
+  updateMissionStatement("All the weed. All the time!");

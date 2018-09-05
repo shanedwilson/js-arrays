@@ -6,13 +6,30 @@ h1 {
     text-align: center;
 }
 
+#donationForm {
+    text-align: center;
+    font-size: 2em;
+}
+
+#donationForm a {
+    text-decoration: none;
+}
+
 #statements, #events, #volunteers, #images {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;  
-    
+    justify-content: space-around;      
 }
+
+#biography {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;    
+    width: 30%;
+    text-align: center
+}
+
 .statement, .event, .volunteer, .bio {
     border: 2px solid black;
     margin: 10px;
@@ -58,4 +75,30 @@ h1 {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+#missionStatement {
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#voterRegistration {
+    font-size: 2em;
+    background: white;
+    animation: animationFrames 2s infinite;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+@keyframes animationFrames{
+    50% {
+     background-color: brown;
+    }
+  }
+
+#voterRegistration a {
+    text-decoration: none;
 }
